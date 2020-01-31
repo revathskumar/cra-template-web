@@ -1,22 +1,14 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 
-import rootReducer from "src/reducers";
+import rootReducer from "reducers";
 
 import logo from "./logo.svg";
 import "bulma/css/bulma.css";
 import "./App.css";
-import Users from "src/components/Users/Users";
-import User from "src/components/Users/User";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
@@ -24,9 +16,9 @@ const store = createStore(
   /* preloadedState, */ composeEnhancers(applyMiddleware(thunk))
 );
 
-// const Home = () => {
-//   return <div>Home</div>;
-// };
+const Home = () => {
+  return <div>Home</div>;
+};
 
 const About = () => {
   return <div>About</div>;
@@ -107,15 +99,6 @@ const NavBar = () => {
   );
 };
 
-const UsersRouter = ({ match }) => {
-  return (
-    <Switch>
-      <Route exact path={match.path} component={Users} />
-      <Route path={`${match.path}/:id`} component={User} />
-    </Switch>
-  );
-};
-
 function App() {
   return (
     <Provider store={store}>
@@ -129,12 +112,7 @@ function App() {
           <section className="section">
             <div className="container">
               <Switch>
-                <Route
-                  exact
-                  path="/"
-                  component={() => <Redirect to="/users" />}
-                />
-                <Route path="/users" component={UsersRouter} />
+                <Route path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="*" component={NotFound} />
               </Switch>
