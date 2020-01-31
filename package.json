@@ -1,6 +1,6 @@
 {
   "name": "cra-template-web",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CRA template for web apps",
   "main": "index.js",
   "scripts": {
