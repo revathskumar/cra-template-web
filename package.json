@@ -1,0 +1,11 @@
+{
+  "name": "cra-template-web",
+  "version": "0.0.1",
+  "description": "CRA template for web apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Revath S Kumar <rsk@revathskumar.com> (http://blog.revathskumar.com/)",
+  "license": "MIT"
+}
