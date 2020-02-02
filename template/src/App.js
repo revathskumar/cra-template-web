@@ -1,20 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
-import thunk from "redux-thunk";
-
-import rootReducer from "reducers";
 
 import logo from "./logo.svg";
 import "bulma/css/bulma.css";
 import "./App.css";
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(
-  rootReducer,
-  /* preloadedState, */ composeEnhancers(applyMiddleware(thunk))
-);
+import { configureStore } from "store"
+
+const store = configureStore({})
 
 const Home = () => {
   return <div>Home</div>;
