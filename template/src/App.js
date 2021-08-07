@@ -26,7 +26,6 @@ const NavBar = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        {/* <a className="navbar-item" href="https://bulma.io"> */}
         <Link className="navbar-item" to="/">
           <img
             className="App-logo"
@@ -36,8 +35,8 @@ const NavBar = () => {
             height="28"
           />
         </Link>
-        {/* </a> */}
 
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a
           role="button"
           className="navbar-burger burger"

@@ -1,5 +1,12 @@
 {
   "package": {
+    "scripts": {
+      "lint": "eslint --ignore-path .gitignore ."
+    },
+    "engines": {
+      "node": ">= 16",
+      "npm": ">= 7"
+    },
     "dependencies": {
       "axios": "^0.21.1",
       "bulma": "^0.9.3",

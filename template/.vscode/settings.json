@@ -1,4 +1,9 @@
 {
   "editor.formatOnSave": true,
-  "javascript.preferences.importModuleSpecifier": "non-relative"
+  "npm.packageManager": "npm",
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
